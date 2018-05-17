@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    body{
+      background:#F0F3EF;
+    }
+    /*觅me 探索生活*/
+    .test{
+      width:390px;
+      height:450px;
+      background: #fff;
+      position: relative;
+      margin:100px;
+      padding:20px;
+      box-sizing:border-box;
+      overflow:hidden;
+    }
+    /*觅me 探索生活 --> 标题*/
+    .test-title{
+      margin-bottom: 4px;
+    }
+    .test-title>span:first-child{
+      color:#222;
+      font-size:22px;
+      font-weight:bold;
+    }
+    .test-title img{
+      vertical-align: middle;
+    }
+    .test-title>span:last-child{
+      color:#999;
+      font-size:14px;
+    }
+
+    /*觅me 探索生活 --> 滑动区域*/
+    .test-scroll{
+      width:1950px;
+      height:355px;
+      border-bottom:1px solid #f5f5f5;
+      position: absolute;
+      left:-390px;
+      display: flex;
+      justify-content:space-around;
+      cursor:pointer;
+    }
+    .test-scroll-1{
+      /*margin:0 20px;*/
+      width:350px;
+      height:355px;
+      display: inline-block;
+      /*border:1px solid;*/
+    }
+    /*觅me 探索生活 --> 滑动区域 --> 标题*/
+    .test-scroll-1>span:first-of-type{
+      display: inline-block;
+      width:350px;
+      height:50px;
+      line-height: 50px;
+      color:#333;
+      font-size:16px;
+      /*border:2px solid;*/
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    .test-scroll-1>span:last-of-type{
+      display: inline-block;
+      width:350px;
+      height:40px;
+      color:#999;
+      font-size:14px;
+      /*border:2px solid;*/
+      overflow:hidden;
+      text-align:center;
+    }
+
+    /*觅me 探索生活 滚动按钮*/
+    .test-scroll-btn{
+      position: relative;
+      /*border:1px solid;*/
+      top:355px;
+      text-align:center;
+    }
+    .test-scroll-btn>span{
+      display: inline-block;
+      width:6px;
+      height:6px;
+      border:2px solid #b9beba;
+      border-radius:50%;
+      margin:10px 4px 0 4px;
+      cursor:pointer;
+    }
+    .test-scroll-btn .selected{
+      background: #eb3436; 
+      border:2px solid transparent;
+      box-shadow:0 0 2px #eb3436;
+    }
+    /*觅me 探索生活 左右按钮*/
+    .test-btn{
+      width:100%;
+      height:40px;
+      position: absolute;
+      left:0px;
+      top:50%;
+      margin-top:-20px;
+      /*border:1px solid;*/
+    }
+    .test-btn>span{
+      width:20px;
+      height:40px;
+      line-height:40px;
+      text-align:center;
+      display: inline-block;
+      font-size:20px; 
+      background: #d9d9d9;
+      color:hsla(0,0%,100%,.4);
+    }
+    .test-btn>span:last-child{
+      float:right;
+    }
+    .test-btn>span:hover{
+      cursor:pointer;
+      background: #999999;
+    }
+  </style>
+</head>
+<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+<body>
+<!-- /*觅me 探索生活*/ -->
+  <div class="test">
+  <!-- 觅me 探索生活 》 标题 -->
+    <div class="test-title">
+      <span>觅me</span>
+      <img src="./images/logo.png" alt="">
+      <span>探索生活</span>
+    </div>
+  <!-- 觅me 探索生活  滑动区域   -->
+    <div class="test-scroll">
+      <div class="test-scroll-1">
+        <img src="./images/3.webp" alt="">
+        <br>
+        <span>看中性价比和安全，17万出头买福特翼虎值得吗？</span>
+        <br>
+        <span>
+          预算十七八万，如果要选择合资紧凑型SUV，选择面其实并不多，几款老牌劲旅，本田CR-V、日产奇骏、丰田RAV4、福特翼虎、马自达CX-5，而且这个价位能选择的，大多数是这些车型的中低配，甚至是低配，所以就需要消费者在这其中做选择的时候，权衡方方面面的因素要更多了，这些车型都有自己的消费者群体。
+        </span>
+      </div> 
+      <div class="test-scroll-1">
+        <img src="./images/1.webp" alt="">
+        <br>
+        <span>挑飞度战五菱，这款7.99万起的比亚迪，能走上神坛？</span>
+        <br>
+        <span>
+          放开二胎政策后，给国内的汽车市场注入了一剂猛药，因此催生了一个词——二胎车。很多人买7座车，不论是MPV还是7座SUV，给人的第一感知是要生二胎了？针对二胎车，合资品牌推出众多相应的车型，自主品牌更是纷纷效仿。但由于自主品牌自身在研发的不足，导致中国的“二胎车”缺乏国际范，不过下面这款比亚迪车型，或许颠覆我们对自主MPV的看法，走上神坛！
+        </span>
+      </div>
+      <div class="test-scroll-1">
+        <img src="./images/2.webp" alt="">
+        <br>
+        <span>133万全款订车三年后提车，也就特斯拉能干得出来</span>
+        <br>
+        <span>
+          众筹搞项目在前俩年就像现如今的共享经济一样繁荣，其中混着不少投机分子盯着老百姓的荷包忽悠，当然也有不少蛮不错的项目，让好的概念得以面市，只不过众筹这种形式都是玩玩小钱的，大不了就万把块钱，然而这个地球就有人牛气，搞个项目能哄的全球的有钱人乖乖掏钱，而且一套就是133万......
+        </span>
+      </div>
+      <div class="test-scroll-1">
+        <img src="./images/3.webp" alt="">
+        <br>
+        <span>看中性价比和安全，17万出头买福特翼虎值得吗？</span>
+        <br>
+        <span>
+          预算十七八万，如果要选择合资紧凑型SUV，选择面其实并不多，几款老牌劲旅，本田CR-V、日产奇骏、丰田RAV4、福特翼虎、马自达CX-5，而且这个价位能选择的，大多数是这些车型的中低配，甚至是低配，所以就需要消费者在这其中做选择的时候，权衡方方面面的因素要更多了，这些车型都有自己的消费者群体。
+        </span>
+      </div> 
+      <div class="test-scroll-1">
+        <img src="./images/1.webp" alt="">
+        <br>
+        <span>挑飞度战五菱，这款7.99万起的比亚迪，能走上神坛？</span>
+        <br>
+        <span>
+          放开二胎政策后，给国内的汽车市场注入了一剂猛药，因此催生了一个词——二胎车。很多人买7座车，不论是MPV还是7座SUV，给人的第一感知是要生二胎了？针对二胎车，合资品牌推出众多相应的车型，自主品牌更是纷纷效仿。但由于自主品牌自身在研发的不足，导致中国的“二胎车”缺乏国际范，不过下面这款比亚迪车型，或许颠覆我们对自主MPV的看法，走上神坛！
+        </span>
+      </div>
+    </div>
+  <!-- 觅me 探索生活 滚动按钮 -->
+    <div class="test-scroll-btn">
+      <span class="selected"></span>
+      <span></span>
+      <span></span>
+    </div>
+  <!-- 觅me 探索生活 左右按钮 -->
+    <div class="test-btn">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+    </div>
+  </div>
+</body>
+<script src="./js/slidings.js"></script>
+<script>
+    var params={
+      client:$('.test'),
+      move:$('.test-scroll'),
+      moveChild:$('.test-scroll>div'),
+      scrollBtn:$('.test-scroll-btn span'),
+      scrollBtnColor:'selected',
+      nextBtn:$('.next'),
+      prevBtn:$('.prev'),
+      i:1,
+      timer:null,
+      times:1200
+    }
+
+  slidings(params);
+</script>
+</html>
