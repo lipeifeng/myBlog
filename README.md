@@ -17,3 +17,4 @@
 - axios   ：抓取数据栗子
 - lodash   ：小功能集合
 - formidable ：表单处理上传图片
+- base64   ：加密解密模块
