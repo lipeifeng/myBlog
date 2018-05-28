@@ -12,3 +12,4 @@
 
 ## Nodejs
 - ejs  ：ejs栗子
+- fs   ：fs操作栗子
