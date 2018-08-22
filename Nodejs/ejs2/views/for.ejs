@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>循环结构</title>
+  <style>
+    ul{
+      list-style: none;
+    }
+    ul li{
+
+    }
+    body{
+      height:2000px;
+    }
+    table,td{
+      border-collapse: collapse;
+    }
+
+    td{
+      padding:10px;
+    }
+    .goods li{
+      height:370px;
+      width:200px;
+      border:solid 1px #ddd;
+      float:left;
+      margin-right:10px;
+      margin-bottom:10px;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <% for(var i=1;i<=20;i++){  %>
+    <span style="color:red"><%= i %></span><br>
+  <% }  %>
+
+  <hr>
+
+  <ul>
+  <% for(var i=1;i<=20;i++){  %>
+    <li><%= i %></li>
+  <% }  %>
+  </ul>
+
+  <hr>
+  <h2>用户列表</h2>
+  <table border="1">
+    <tr><td>名字</td><td>年龄</td><td>操作</td></tr>
+    <% for(var i=0;i<users.length;i++){ %>
+    <tr><td><%= users[i].name %></td><td><%= users[i].age %></td><td>删除  修改</td></tr>
+    <% } %>
+  </table>
+
+  <hr>
+
+  <h2>商品列表</h2>
+
+  <ul class="goods">
+    <% for(var i=0;i<goods.length;i++){%>
+    <li>
+      <img src="<%= goods[i].pic %>" alt="" width="100%">
+      <h5><%= goods[i].title %></h5>
+    </li>
+    <% } %>
+    
+
+  </ul>
+
+
+</body>
+</html>
