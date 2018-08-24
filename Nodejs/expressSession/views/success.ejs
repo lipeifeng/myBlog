@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= info %></title>
+</head>
+<body>
+  <h1 style="font-size:50px">
+    :)
+  </h1>
+  <h2><%= info %></h2>  
+  <p><%= time/1000 %> 秒之后跳转</p>
+
+  <script>
+    setTimeout(function(){
+      location.href = '<%= url %>';
+    }, <%= time %>);
+  </script>
+</body>
+</html>
